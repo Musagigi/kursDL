@@ -1,0 +1,35 @@
+/* checked - это состояние элемента (нашего инпута) */
+/* .menu-toggle:checked ~ .menu {
+	outline: 2px solid red;
+} */
+
+.btn {
+	padding: 10px 20px;
+	background: #777;
+	color: #fff;
+}
+.btn:active {
+	box-shadow: 5px 5px 5px #222 inset;
+}
+
+.menu-toggle {
+	display: none;
+}
+
+.menu {
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.menu-toggle:checked ~ .menu {
+	opacity: 1;
+}
+
+/* befor, after - это псевдо элементы, по сути их нет в HTML, но мы их добавляем */
+.sale::after {
+	content: "sale";
+	padding: 0px 5px;
+	margin: 10px;
+	background-color: red;
+	border-radius: 50%;
+}
