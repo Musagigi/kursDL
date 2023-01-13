@@ -1,0 +1,51 @@
+* {
+	/* margin: 0; */
+	/* padding: 0; */
+	box-sizing: border-box;
+}
+
+.card {
+	width: 220px;
+	border-radius: 5%;
+	background-color: rgb(99, 79, 230);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+}
+
+.card-img__pic {
+	width: 200px;
+	height: 210px;
+	overflow: hidden;
+}
+
+.card-title {
+	width: 180px;
+	height: 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card-title__text {
+	color: rgb(251, 251, 251);
+	font-size: 20px;
+	margin: 0 auto;
+}
+
+.card-title__figureL {
+	width: 0;
+	height: 0;
+	border-top: 7px solid transparent;
+	border-right: 14px solid rgb(255, 255, 255);
+	border-bottom: 7px solid transparent;
+}
+
+.card-title__figureR {
+	width: 0;
+	height: 0;
+	border-top: 7px solid transparent;
+	border-left: 14px solid rgb(255, 255, 255);
+	border-bottom: 7px solid transparent;
+}

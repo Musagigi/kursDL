@@ -19,10 +19,12 @@
 .menu {
 	transition: 0.5s;
 	opacity: 0;
+	/* display: none; */
 }
 
 .menu-toggle:checked ~ .menu {
 	opacity: 1;
+	/* display: block; */
 }
 
 /* befor, after - это псевдо элементы, по сути их нет в HTML, но мы их добавляем */
