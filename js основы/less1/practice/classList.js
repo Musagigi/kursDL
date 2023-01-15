@@ -9,7 +9,8 @@ window.addEventListener('load', function () {
 })
 
 function boxActive() {
+	// item3-active - берет из css
 	this.classList.toggle('item3-active')
 	let color = this.classList.contains('item3-active') ? this.dataset.color : 'inherit'
 	this.style.color = color
-}
+} 
