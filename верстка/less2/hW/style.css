@@ -5,47 +5,53 @@
 }
 
 .card {
-	width: 220px;
+	width: 300px;
 	border-radius: 5%;
-	background-color: rgb(99, 79, 230);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	text-align: center;
 	padding: 10px;
+	background-color: rgb(99, 79, 230);
 }
 
-.card-img__pic {
-	width: 200px;
-	height: 210px;
-	overflow: hidden;
+.card-img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 10px;
 }
 
-.card-title {
-	width: 180px;
-	height: 70px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.card-title__text {
-	color: rgb(251, 251, 251);
+.cardInfo-link {
 	font-size: 20px;
-	margin: 0 auto;
+	text-decoration: none;
+	color: rgb(251, 251, 251);
 }
 
-.card-title__figureL {
+.cardInfo-link::before,
+.cardInfo-link::after {
+	content: "";
+	display: inline-block;
 	width: 0;
 	height: 0;
 	border-top: 7px solid transparent;
+	border-bottom: 7px solid transparent;
+	opacity: 0;
+	transition: 0.3s;
+}
+.cardInfo-link::before {
 	border-right: 14px solid rgb(255, 255, 255);
-	border-bottom: 7px solid transparent;
+	transform: translateX(-30px);
+}
+.cardInfo-link::after {
+	border-left: 14px solid rgb(255, 255, 255);
+	transform: translateX(30px);
 }
 
-.card-title__figureR {
-	width: 0;
-	height: 0;
-	border-top: 7px solid transparent;
-	border-left: 14px solid rgb(255, 255, 255);
-	border-bottom: 7px solid transparent;
+.card:hover .cardInfo-link::before,
+.card:hover .cardInfo-link::after {
+	opacity: 1;
+}
+
+.cardInfo-link:hover::before {
+	transform: translateX(-15px) rotate(180deg);
+}
+.cardInfo-link:hover::after {
+	transform: translateX(15px) rotate(-180deg);
 }
