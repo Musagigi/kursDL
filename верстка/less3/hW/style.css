@@ -9,11 +9,11 @@
 	background-color: rgb(0, 0, 0);
 }
 
-.changeCard-btn:active {
-	background-color: #f2f;
+.changeCard-toogle:checked ~ .changeCard-btn {
+	background-color: #f22;
 }
 
-.changeCard-toogle:checked ~ .menu .card .card-img {
+.changeCard-toogle:checked ~ .menu .card-img {
 	display: none;
 }
 .changeCard-toogle:checked ~ .menu .card {
