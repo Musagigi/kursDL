@@ -6,39 +6,53 @@ window.addEventListener('load', function () {
 	let btnAns = document.querySelector('.btnAns')
 	let result = document.querySelector('.result')
 
-	console.log(numOne, selSign, numTwo, btnAns, result);
 
 	btnAns.addEventListener('click', calculate)
 
 	function calculate() {
+
+		let num1 = +numOne.value
+		let num2 = +numTwo.value
+
 		if (numOne.value === '' && numTwo.value === '') {
-			return
+			return result.innerText = 'введите числа'
 		}
-		if (selSign.value === 'plus') {
-			result.innerText = +numOne.value + +numTwo.value
-			return this.disabled = true
+		switch (selSign.value) {
+			case 'plus':
+				result.innerText = num1 + num2
+				break
+			case 'minus':
+				result.innerText = num1 - num2
+				break
+			case 'multi':
+				result.innerText = num1 * num2
+				break
+			case 'dvsin':
+				result.innerText = num1 / num2
+				break
 		}
-		if (selSign.value === 'minus') {
-			result.innerText = +numOne.value - +numTwo.value
-			return this.disabled = true
-		}
-		if (selSign.value === 'multi') {
-			result.innerText = +numOne.value * +numTwo.value
-			return this.disabled = true
-		}
-		if (selSign.value === 'dvsin') {
-			result.innerText = +numOne.value / +numTwo.value
-			return this.disabled = true
-		}
+		this.disabled = true
 	}
 
-	numOne.addEventListener('keydown', changeBtn)
-	numTwo.addEventListener('keydown', changeBtn)
+
+	// делаем btn не активным
+	numOne.addEventListener('input', changeBtn)
+	numTwo.addEventListener('input', changeBtn)
+	selSign.addEventListener('input', changeBtn)
 
 	function changeBtn() {
-		this.value = this.value.replace(/\D/g, '')
-		if (this) { return btnAns.disabled = false }
+		btnAns.disabled = false
 	}
+
+
+	// запрещаем все кроме цифр
+	numOne.addEventListener('input', clearInput)
+	numTwo.addEventListener('input', clearInput)
+
+	function clearInput() {
+		this.value = this.value.replace(/[^0-9]/g, '')
+	}
+
 
 	// if (selSign.value === 'minus') { return result.innerText = num1 - num2 }
 	// 	if (selSign.value === 'multi') { return result.innerText = num1 * num2 }
