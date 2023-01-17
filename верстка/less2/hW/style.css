@@ -13,9 +13,10 @@
 }
 
 .card-img {
-	max-width: 100%;
-	height: auto;
+	display: block;
 	margin-bottom: 10px;
+	height: auto;
+	max-width: 100%;
 }
 
 .cardInfo-link {
