@@ -1,0 +1,21 @@
+body {
+	margin: 10px;
+}
+
+.box {
+	width: 900px;
+	margin: 0 auto;
+	background: #f228;
+	font-size: 0px; /* чтобы небыло пробелов между boxItem */
+	padding: 5px;
+}
+.boxItem {
+	background-color: #a60;
+	width: 215px;
+	display: inline-block;
+	font-size: 16px; /* возвращаем элемент, но он уже без проебла*/
+	margin: 5px;
+	padding: 8px;
+	border: 3px solid #fff;
+	box-sizing: border-box; /* если убрать все собъется */
+}

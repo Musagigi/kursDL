@@ -1,0 +1,83 @@
+body {
+	margin: 10px;
+}
+header {
+	background-color: rgb(206, 153, 232);
+}
+nav {
+	background-color: rgb(222, 81, 81);
+}
+main {
+	background-color: rgb(0, 157, 255);
+}
+footer {
+	background-color: rgb(206, 153, 232);
+}
+
+.container {
+	max-width: 900px;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+.box {
+	font-size: 0px;
+	/* чтобы boxItem шли ровно с container, 
+	   расширяем сам box в котором они лежат
+	   ориентируемся на margin boItema
+	*/
+	margin: 0 -5px;
+}
+
+.boxItem {
+	background-color: #a60;
+	width: calc(25% - 10px); /* процент пикселей от родителя (.box) */
+	margin: 5px; /* 10px потому что margin 5px, берем с обеих сторон */
+	display: inline-block;
+	font-size: 16px;
+	padding: 8px;
+	border: 3px solid #fff;
+	box-sizing: border-box; /* если убрать все собъется */
+}
+
+/* calc(100% / N - m*2) формула calc() */
+@media screen and (max-width: 700px) {
+	/* берем width указанный в скобках (700px) и делим на 3
+	   в итоге ребенок(.boxItem) занимает 3-ю часть от родителя
+	   выйдет список в 3 столбика
+	*/
+	.boxItem {
+		width: calc(100% / 3 - 10px);
+	}
+	.container {
+		padding: 0 15px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.boxItem {
+		width: calc(100% / 2 - 10px);
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.boxItem {
+		width: calc(100% - 10px);
+	}
+}
+
+/*  */
+/* ПРИМЕРЫ */
+@media screen and (max-width: 600px) {
+	/* страница не превышает 600рх по ширине */
+}
+@media screen and (min-width: 800px) {
+	/* страница не меньше, чем 800рх по ширине */
+}
+
+/* 
+margin: 5px;  5px - every
+margin: 5px 10px;  5px - vertical, 10px - horizontal
+margin: 5px 10px 15px;  5px - top, 10px - horizontal, 15px - bottom
+margin: 5px 10px 15px 20px; top, right, bottom, left
+*/
