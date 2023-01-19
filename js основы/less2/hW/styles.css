@@ -1,7 +1,8 @@
-html, body{
+html,
+body {
 	margin: 40px;
 }
 
-.err{
+.err {
 	outline: 1px solid red;
 }
