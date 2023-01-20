@@ -11,6 +11,7 @@ footer {
 .container {
 	max-width: 1180px;
 	margin: 0 auto;
+	height: auto;
 	padding: 30px;
 	color: white;
 	background-color: rgb(0, 0, 0);
@@ -47,25 +48,22 @@ footer {
 .main {
 	display: inline-block;
 	width: 70%;
+	/* margin-left: -5px; */
 }
-.main + div {
-	display: inline-block;
-	width: 70%;
-	/* height: 100%; */
-	background-color: rgb(232, 182, 239);
-}
+
 .aside {
 	display: inline-block;
-	width: 19%;
+	width: calc(100% / 3.5);
 }
-.aside + div {
-	display: inline-block;
-	width: 19%;
+
+.aside-text {
+	text-align: center;
+	margin: 0 auto;
 }
 
 .cards {
 	/* width: 100%; */
-	/* display: block; */
+	/* display: inline-block; */
 	/* height: 100%; */
 	/* margin: 0 auto; */
 	padding: 0;
@@ -80,10 +78,9 @@ footer {
 	box-sizing: border-box;
 	padding: 5px;
 	margin: 5px;
-	border-radius: 15px;
+	border-radius: 5px;
 	width: calc(100% / 4 - 10px);
-	background-color: rgb(0, 0, 0);
-	font-size: 0px;
+	background-color: rgb(115, 23, 158);
 }
 
 .card-img {
@@ -99,27 +96,38 @@ footer {
 	font-size: 16px;
 }
 
+/* создаем стрелочки */
 .cardInfo-link::before,
 .cardInfo-link::after {
 	content: "";
 	display: inline-block;
 	width: 0;
 	height: 0;
-	border-top: 7px solid transparent;
-	border-bottom: 7px solid transparent;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	transition: 0.5s;
 	opacity: 0;
 }
 .cardInfo-link::before {
-	border-right: 14px solid rgb(255, 255, 255);
+	border-right: 10px solid rgb(255, 255, 255);
 	transform: translateX(-15px);
 }
 .cardInfo-link::after {
-	border-left: 14px solid rgb(255, 255, 255);
+	border-left: 10px solid rgb(255, 255, 255);
 	transform: translateX(15px);
 }
-.card:hover .cardInfo-link::before,
-.card:hover .cardInfo-link::after {
+/* закончили создание */
+/* отображение стрелочек при наведении на карту */
+.cards:hover .cardInfo-link::before,
+.cards:hover .cardInfo-link::after {
 	opacity: 1;
+}
+/* наведение на ссылку */
+.cardInfo-link:hover::before {
+	transform: translateX(-7px) rotate(180deg);
+}
+.cardInfo-link:hover::after {
+	transform: translateX(7px) rotate(-180deg);
 }
 /* END MAIN */
 
@@ -133,5 +141,38 @@ footer {
 	.main {
 		width: 100%;
 		/* padding: 0 15px; */
+	}
+}
+
+@media screen and (max-width: 925px) {
+	.card-item {
+		width: calc(100% / 3 - 10px);
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.card-item {
+		width: calc(100% / 2 - 10px);
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.card-img {
+		display: none;
+	}
+	.card-item {
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 340px) {
+	.cardInfo-link::before,
+	.cardInfo-link::after {
+		display: none;
+	}
+	.card-item:last-child {
+		margin-bottom: 0px;
 	}
 }
