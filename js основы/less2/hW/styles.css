@@ -3,6 +3,6 @@ body {
 	margin: 40px;
 }
 
-.err {
+.errorColor {
 	outline: 1px solid red;
 }
