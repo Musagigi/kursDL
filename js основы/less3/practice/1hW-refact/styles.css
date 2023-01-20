@@ -1,0 +1,8 @@
+html,
+body {
+	margin: 40px;
+}
+
+.errorColor {
+	outline: 1px solid red;
+}
