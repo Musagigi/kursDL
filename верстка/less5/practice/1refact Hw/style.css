@@ -1,3 +1,12 @@
+body {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 header {
 	background-color: rgb(206, 153, 232);
 }
@@ -12,7 +21,7 @@ footer {
 	max-width: 1180px;
 	margin: 0 auto;
 	height: auto;
-	padding: 30px;
+	padding: 0 30px;
 	color: white;
 	background-color: rgb(0, 0, 0);
 	/* box-sizing: border-box; */
@@ -20,14 +29,10 @@ footer {
 
 /* START HEADER */
 .header-menu {
-	/* display: inline-block; */
-	margin: 0 auto;
-	padding: 5px;
+	margin: 0 -10px;
+	padding: 10px 0;
 	font-size: 0px;
-	text-align: center;
 	list-style-type: none;
-	background-color: #fff;
-	box-sizing: border-box;
 }
 
 .header-menu li {
@@ -45,48 +50,52 @@ footer {
 /* END HEADER */
 
 /* START MAIN */
+.aside,
 .main {
 	display: inline-block;
-	width: 70%;
-	/* margin-left: -5px; */
+	vertical-align: top; /* выравнивание текста по верху */
+	background-color: rgb(255, 255, 255);
 }
 
 .aside {
-	display: inline-block;
-	width: calc(100% / 3.5);
+	width: 200px;
 }
 
-.aside-text {
+.aside-item {
+	color: black;
+}
+
+.main-title {
+	color: black;
+}
+
+.main {
 	text-align: center;
-	margin: 0 auto;
+	padding: 1px 10px;
+	width: calc(100% - 206px);
+	box-sizing: border-box;
 }
 
 .cards {
-	/* width: 100%; */
-	/* display: inline-block; */
-	/* height: 100%; */
-	/* margin: 0 auto; */
-	padding: 0;
-	text-align: center;
-	box-sizing: border-box;
-	font-size: 0px;
+	font-size: 0;
+	margin: 0 -10px;
 }
 
 .card-item {
+	margin: 10px;
+	padding: 10px;
+	width: calc(100% / 4 - 20px);
+	border-radius: 10px;
+	vertical-align: top;
+	text-align: center;
+	font-size: 16px;
 	display: inline-block;
-	list-style-type: none;
 	box-sizing: border-box;
-	padding: 5px;
-	margin: 5px;
-	border-radius: 5px;
-	width: calc(100% / 4 - 10px);
-	background-color: rgb(115, 23, 158);
+	background-color: rgb(118, 207, 248);
 }
 
 .card-img {
 	display: block;
-	height: auto;
-	max-width: 100%;
 	margin-bottom: 5px;
 }
 
@@ -124,55 +133,51 @@ footer {
 }
 /* наведение на ссылку */
 .cardInfo-link:hover::before {
-	transform: translateX(-7px) rotate(180deg);
+	transform: translateX(-5px) rotate(180deg);
 }
 .cardInfo-link:hover::after {
-	transform: translateX(7px) rotate(-180deg);
+	transform: translateX(5px) rotate(-180deg);
 }
 /* END MAIN */
 
-@media screen and (max-width: 800px) {
+/* START MEDIA */
+@media screen and (max-width: 980px) {
+	.card-item {
+		width: calc(100% / 3 - 20px);
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.card-item {
+		width: calc(100% / 2 - 20px);
+	}
+}
+
+@media screen and (max-width: 810px) {
 	.container {
-		padding: 15px;
+		padding: 0 15px;
 	}
 	.aside {
 		display: none;
 	}
 	.main {
 		width: 100%;
-		/* padding: 0 15px; */
 	}
 }
 
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 575px) {
+	.header-menu li {
+		display: block;
+	}
+	.header-menu a {
+		display: block;
+	}
+
 	.card-item {
-		width: calc(100% / 3 - 10px);
+		width: calc(100% - 20px);
 	}
-}
-
-@media screen and (max-width: 700px) {
-	.card-item {
-		width: calc(100% / 2 - 10px);
-	}
-}
-
-@media screen and (max-width: 400px) {
 	.card-img {
 		display: none;
 	}
-	.card-item {
-		display: block;
-		margin: 0 auto;
-		margin-bottom: 10px;
-	}
 }
-
-@media screen and (max-width: 340px) {
-	.cardInfo-link::before,
-	.cardInfo-link::after {
-		display: none;
-	}
-	.card-item:last-child {
-		margin-bottom: 0px;
-	}
-}
+/* END MEDIA */
