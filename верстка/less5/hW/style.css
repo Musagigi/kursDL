@@ -15,7 +15,7 @@ img {
 	padding: 0 30px;
 	color: white;
 	background-color: rgb(0, 0, 0);
-	/* box-sizing: border-box; */
+	box-sizing: border-box;
 }
 
 .row {
@@ -26,8 +26,6 @@ img {
 
 .col {
 	margin: 0 10px;
-	/* margin-left: 10px;
-	margin-right: 10px; */
 	box-sizing: border-box;
 }
 
@@ -36,12 +34,12 @@ img {
 	padding: 10px 0;
 	justify-content: space-between;
 	align-items: center;
-	/* height: 120px */
 	margin: 0;
 	margin-bottom: 100px;
 }
 
 .header-logo {
+	display: flex;
 	align-items: center;
 }
 
@@ -62,10 +60,148 @@ img {
 /* END HEADER */
 
 /* START MAIN */
-.main-card {
-	flex-wrap: nowrap;
-	justify-content: space-between;
+
+/* start block1 */
+.card1 {
+	margin-bottom: 100px;
+	justify-content: center;
 }
 
-.card-info {
+.card1-img {
+	max-width: 550px;
 }
+
+.card1-info {
+	max-width: 550px;
+}
+
+.card1-info__title {
+	display: inline-block;
+	font-size: 32px;
+	margin-top: 0;
+	margin-bottom: 50px;
+}
+
+.card1-info__text {
+	max-width: 470px;
+}
+/* end block1 */
+
+/* start block2 */
+.block2 {
+	/* flex-wrap: nowrap; */
+	margin-bottom: 210px;
+	justify-content: space-evenly;
+}
+
+.card2 {
+	max-width: 355px;
+}
+
+.card2-img {
+	margin-bottom: 30px;
+}
+
+.card2-title {
+	font-size: 26px;
+	margin-bottom: 30px;
+}
+
+.card2-text {
+	max-width: 355px;
+	margin-bottom: 40px;
+	font-size: 14px;
+}
+
+.card2-btn {
+	width: 200px;
+	height: 50px;
+	font-size: 18px;
+	border-radius: 55px;
+	background-color: rgb(12, 243, 147);
+}
+
+/* end block2 */
+
+/* start block3 */
+.card3-title {
+	font-size: 36px;
+	margin-top: 0;
+	margin-bottom: 40px;
+}
+
+.info-mini {
+	margin-bottom: 50px;
+}
+
+.mini-text {
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+
+.mini-text2 {
+	max-width: 550px;
+	font-size: 14px;
+	margin: 0;
+}
+/* end block3 */
+
+/* start block4 */
+.block4 {
+	min-height: 350px;
+	justify-content: center;
+	margin-bottom: 100px;
+}
+
+.block4-mini {
+	display: flex;
+	margin-bottom: 75px;
+}
+
+.mini4-img {
+	min-width: 130px;
+	min-height: 130px;
+	background: rgba(77, 182, 119, 1);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mini4-info {
+	max-width: 390px;
+}
+
+.mini4-title {
+	margin: 0 auto;
+}
+/* end block4 */
+
+/* start block5 */
+.cards-block5 {
+	margin-bottom: 100px;
+}
+
+.block5-title {
+	margin: 0 auto;
+	margin-bottom: 50px;
+	text-align: center;
+	font-size: 48px;
+}
+
+.block5-mini {
+	text-align: center;
+	justify-content: center;
+}
+
+.mini5-img {
+	width: 300px;
+}
+/* end block5 */
+/* END MAIN */
+
+/* START FOOTER */
+.footer-info {
+	text-align: center;
+}
+/* END FOOTER */
