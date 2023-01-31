@@ -1,0 +1,48 @@
+/* article.teamItem*3>img>h3.h3{Text $}>div{aaa $} */
+
+.sectionTeam {
+	text-align: center;
+}
+
+.teamItem {
+	width: calc(100% / 3 - 30px);
+}
+
+.teamItem .h3 {
+	color: #1d9d73;
+}
+
+.advItem {
+	width: calc(100% / 2 - 30px);
+	display: flex;
+	margin-top: 35px;
+}
+
+.advRange {
+	width: 131px;
+	height: 131px;
+	margin-right: 20px;
+	line-height: 131px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #1d9d73;
+}
+
+.advRange img {
+	vertical-align: middle;
+}
+
+.advTexts {
+	width: calc(100% - 151px);
+}
+
+.advTitle {
+	color: #1d9d73;
+	margin-top: 0;
+}
+
+@media screen and (max-width: 800px) {
+	.advItem {
+		width: calc(100% / 1 - 30px);
+	}
+}
