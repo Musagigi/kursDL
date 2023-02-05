@@ -5,6 +5,18 @@
 	box-shadow: 0 3px 10px rgb(197, 193, 193);
 }
 
+.header {
+	background: url(/img/sectionWork/Warhammer-40-000-Blood-Angels-Video-Game-Art-2073611.jpg)
+		no-repeat top;
+}
+
+.headerMenu {
+	margin: 5% 0;
+	padding: 50px 0;
+	color: rgb(0, 0, 0);
+	background: rgba(185, 189, 138, 0.24);
+}
+
 .headerLogo {
 	display: flex;
 	align-items: center;
@@ -53,11 +65,16 @@
 .infoCard {
 	width: calc(100% / 3 - 30px);
 }
+
+.cardText {
+	max-width: 330px;
+}
 /* end sectionInfo */
 
 /* start sectionWork */
 .sectionWork {
-	background-image: url(/img/sectionWork/Warhammer-40-000-Blood-Angels-Video-Game-Art-2073611.jpg);
+	background: url(/img/sectionWork/Warhammer-40-000-Blood-Angels-Video-Game-Art-2073611.jpg)
+		no-repeat bottom;
 	margin-bottom: 75px;
 }
 
@@ -156,13 +173,17 @@
 	}
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 825px) {
 	.headerMenu {
 		justify-content: center;
 	}
 }
 
 @media screen and (max-width: 700px) {
+	.cardText {
+		max-width: 605px;
+	}
+
 	.infoCard {
 		width: calc(100% - 30px);
 	}
@@ -176,9 +197,15 @@
 	}
 }
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 625px) {
+	.header .container {
+		padding: 10px 15px;
+	}
+
 	.headerMenu {
 		display: block;
+		padding: 0;
+		background: rgba(107, 104, 104, 0);
 	}
 
 	.headerLogo {
@@ -190,7 +217,14 @@
 		width: 100%;
 		margin: 10px 0;
 		padding: 10px;
-		background-color: #3333;
+		color: #fff;
+		background-color: rgba(139, 138, 138, 0.2);
 		box-sizing: border-box;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.headerNav {
+		margin: 0;
 	}
 }
