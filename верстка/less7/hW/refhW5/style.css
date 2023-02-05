@@ -1,0 +1,186 @@
+header {
+	background-color: rgb(206, 153, 232);
+}
+nav {
+	background-color: rgb(222, 81, 81);
+}
+footer {
+	background-color: rgb(206, 153, 232);
+}
+
+body {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.container {
+	max-width: 1180px;
+	margin: 0 auto;
+	height: auto;
+	padding: 0 30px;
+	color: white;
+	background-color: rgb(0, 0, 0);
+	/* box-sizing: border-box; */
+}
+
+.row {
+	margin: 0 -10px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.col {
+	margin: 0 10px;
+	/* margin-left: 10px;
+	margin-right: 10px; */
+	box-sizing: border-box;
+}
+
+/* START HEADER */
+.header-menu {
+	padding: 10px 0;
+	list-style-type: none;
+}
+
+.header-menu a {
+	display: inline-block;
+	text-decoration: none;
+	padding: 5px 10px;
+	background-color: #fda;
+}
+/* END HEADER */
+
+/* START MAIN */
+.wrap-mainAside {
+	display: flex;
+	/* flex-wrap: wrap; */
+}
+
+.aside {
+	width: 200px;
+	color: black;
+	background-color: rgb(255, 255, 255);
+}
+
+.main-title {
+	color: black;
+}
+
+.main {
+	text-align: center;
+	padding: 0 10px;
+	width: calc(100% - 200px);
+	box-sizing: border-box;
+	background-color: rgb(214, 97, 97);
+}
+
+.card-item {
+	padding: 10px;
+	border-radius: 10px;
+	text-align: center;
+	width: calc(100% / 4 - 20px);
+	background-color: rgb(118, 207, 248);
+	margin-bottom: 20px;
+}
+
+.card-img {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.cardInfo-link {
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-size: 16px;
+}
+
+/* создаем стрелочки */
+.cardInfo-link::before,
+.cardInfo-link::after {
+	content: "";
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	transition: 0.5s;
+	opacity: 0;
+}
+.cardInfo-link::before {
+	border-right: 10px solid rgb(255, 255, 255);
+	transform: translateX(-15px);
+}
+.cardInfo-link::after {
+	border-left: 10px solid rgb(255, 255, 255);
+	transform: translateX(15px);
+}
+/* закончили создание */
+/* отображение стрелочек при наведении на карту */
+.card-item:hover .cardInfo-link::before,
+.card-item:hover .cardInfo-link::after {
+	opacity: 1;
+}
+/* наведение на ссылку */
+.cardInfo-link:hover::before {
+	transform: translateX(-5px) rotate(180deg);
+}
+.cardInfo-link:hover::after {
+	transform: translateX(5px) rotate(-180deg);
+}
+/* END MAIN */
+
+/* START FOOTER */
+.footer-text {
+	padding: 10px 0;
+	color: white;
+	justify-content: space-between;
+}
+
+/* END FOOTER */
+
+/* START MEDIA */
+@media screen and (max-width: 980px) {
+	.card-item {
+		width: calc(100% / 3 - 20px);
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.card-item {
+		width: calc(100% / 2 - 20px);
+	}
+}
+
+@media screen and (max-width: 810px) {
+	.container {
+		padding: 0 15px;
+	}
+	.aside {
+		display: none;
+	}
+	.main {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.header-menu li {
+		display: block;
+		margin-bottom: 10px;
+	}
+	.header-menu a {
+		display: block;
+	}
+
+	.card-item {
+		width: calc(100% - 20px);
+	}
+	.card-img {
+		display: none;
+	}
+}
+/* END MEDIA */
