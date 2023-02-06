@@ -109,6 +109,6 @@ p {
 
 @media screen and (max-width: 400px) {
 	:root {
-		--offset: 5px;
+		--offset: 8px;
 	}
 }

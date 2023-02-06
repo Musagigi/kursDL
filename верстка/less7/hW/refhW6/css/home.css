@@ -22,7 +22,7 @@
 	align-items: center;
 }
 
-.headerLogo p {
+.headerLogo div {
 	margin: 0 8px;
 }
 
@@ -44,7 +44,7 @@
 /* start sectionServ */
 .sectionServ {
 	text-align: center;
-	margin-bottom: 75px;
+	margin-bottom: 7.5rem;
 }
 
 .servText {
@@ -59,7 +59,7 @@
 
 /* start sectionInfo */
 .sectionInfo {
-	margin-bottom: 75px;
+	margin-bottom: 7.5rem;
 }
 
 .infoCard {
@@ -75,7 +75,24 @@
 .sectionWork {
 	background: url(/refhW6/img/sectionWork/Warhammer-40-000-Blood-Angels-Video-Game-Art-2073611.jpg)
 		no-repeat bottom;
-	margin-bottom: 75px;
+	margin-bottom: 7.5rem;
+	position: relative;
+}
+
+.sectionWork::before {
+	/* затемнение фона */
+	content: "";
+	position: absolute;
+	background: rgba(0, 0, 0, 0.5);
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.sectionWork .container {
+	/* выводим контейнер с содержимым на передний план */
+	position: relative;
+	z-index: 2;
 }
 
 .sectionWork h2 {
@@ -84,37 +101,37 @@
 }
 
 .workItems {
-	margin-bottom: 30px;
+	margin-bottom: 3rem;
 }
 
 .item {
 	width: calc(100% / 2 - var(--offset) * 2);
 }
 
-.pic {
-	margin-right: 23px;
+.item p {
+	color: #fff;
+	margin: 0;
+	/* font-size: 1.4rem; */
 }
 
 .itemTitle {
-	display: inline-block;
 	color: var(--green);
 }
 
-.itemText {
-	color: #fff;
-	font-size: 14px;
+.itemTitle::before {
+	content: url(/refhW6/img/sectionWork/.png);
 }
 /* end sectionWork */
 
 /* start sectionTestim */
 .sectionTestim {
-	margin-bottom: 130px;
+	margin-bottom: 13rem;
 }
 
 .sectionTestim h2 {
 	text-align: center;
 	color: #333;
-	margin-bottom: 80px;
+	margin-bottom: 8rem;
 }
 
 .personCard {
@@ -124,7 +141,7 @@
 .personImg {
 	width: 131px;
 	height: 131px;
-	margin-bottom: 20px;
+	margin-bottom: 2rem;
 }
 
 .imgPic {
@@ -134,25 +151,12 @@
 }
 
 .personText {
-	margin-bottom: 10px;
-}
-
-/* .personText::before {
-
-} */
-
-.quotes {
-	display: inline-block;
-	width: 35px;
-	height: 25px;
-	text-align: center;
-	color: var(--green);
-	font-size: 32px;
+	margin-bottom: 1rem;
 }
 
 .personName {
 	color: #333;
-	margin-bottom: 5px;
+	margin-bottom: 0.5rem;
 }
 
 .personProfession {
