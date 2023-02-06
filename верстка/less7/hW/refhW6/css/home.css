@@ -6,7 +6,7 @@
 }
 
 .header {
-	background: url(/img/sectionWork/Warhammer-40-000-Blood-Angels-Video-Game-Art-2073611.jpg)
+	background: url(/refhW6/img/sectionWork/Warhammer-40-000-Blood-Angels-Video-Game-Art-2073611.jpg)
 		no-repeat top;
 }
 
@@ -73,7 +73,7 @@
 
 /* start sectionWork */
 .sectionWork {
-	background: url(/img/sectionWork/Warhammer-40-000-Blood-Angels-Video-Game-Art-2073611.jpg)
+	background: url(/refhW6/img/sectionWork/Warhammer-40-000-Blood-Angels-Video-Game-Art-2073611.jpg)
 		no-repeat bottom;
 	margin-bottom: 75px;
 }
@@ -245,7 +245,7 @@
 		width: 100%;
 		margin: 10px 0;
 		padding: 10px;
-		color: #fff;
+		color: rgb(255, 255, 255);
 		background-color: rgba(139, 138, 138, 0.2);
 		box-sizing: border-box;
 	}
