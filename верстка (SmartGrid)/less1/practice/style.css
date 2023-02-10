@@ -1,0 +1,29 @@
+.profit {
+	background: rgb(231, 122, 122);
+	padding: 15px 0;
+}
+
+.container {
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.item {
+	margin: 15px;
+	max-width: 250px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.item .subtitle {
+	font-size: 1.5rem;
+	color: #fff;
+	margin: 10px 0;
+}
