@@ -27,3 +27,13 @@
 	color: #fff;
 	margin: 10px 0;
 }
+
+@media screen and (max-width: 1180px) {
+	.container {
+		max-width: 800px;
+	}
+
+	.row {
+		justify-content: center;
+	}
+}
