@@ -37,3 +37,20 @@
 		justify-content: center;
 	}
 }
+
+/* Section2 */
+.row2 {
+	display: flex;
+	flex-wrap: wrap;
+	/* justify-content: space-around; */
+}
+
+.item2 {
+	background: rgb(0, 247, 255);
+}
+
+.item2-1 {
+	background-color: rgb(247, 111, 111);
+	/* flex-grow - знаимает все оставшееся свобод. место*/
+	flex-grow: 1;
+}
