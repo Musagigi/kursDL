@@ -1,11 +1,104 @@
-body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,input,textarea,p,blockquote,th,td,menu{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img,abbr{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ul li,menu li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}legend{color:#000;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+menu {
+	margin: 0;
+	padding: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+fieldset,
+img,
+abbr {
+	border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style: normal;
+	font-weight: normal;
+}
+ul li,
+menu li {
+	list-style: none;
+}
+caption,
+th {
+	text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+sup {
+	vertical-align: text-top;
+}
+sub {
+	vertical-align: text-bottom;
+}
+input,
+textarea,
+select {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+}
+legend {
+	color: #000;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
 
-img{
+img {
 	max-width: 100%;
 }
 
 /* styles */
-.wrap{
+.wrap {
 	max-width: 960px;
 	margin: 0 auto;
 	height: 100%;
@@ -13,20 +106,50 @@ img{
 	overflow: hidden;
 }
 
-.profit{
+.profit {
 	background: #232324;
 	padding: 15px 0;
 }
 
-.profit .item{
+.profit .item {
 	border: 3px solid #fff;
 	text-align: center;
 	background: #fff;
 }
 
-.profit .item .text{
+.profit .item .text {
 	text-align: left;
 	font-style: italic;
 }
 
 /* positions */
+.wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.item {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 480px;
+	margin: 5px;
+	box-sizing: border-box;
+}
+
+.item .img {
+	width: 110px;
+	flex-grow: 1;
+}
+
+.item .text {
+	width: 350px;
+	flex-grow: 3;
+}
+
+@media screen and (max-width: 960px) {
+	.item:nth-child(2n) {
+		/* display: block; */
+		flex-direction: row-reverse;
+	}
+}
