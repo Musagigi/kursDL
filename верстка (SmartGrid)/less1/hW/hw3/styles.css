@@ -95,6 +95,7 @@ section {
 
 img {
 	max-width: 100%;
+	height: auto;
 }
 
 /* styles */
@@ -133,6 +134,7 @@ img {
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 480px;
+	/* flex: 1 1 480px */
 	margin: 5px;
 	box-sizing: border-box;
 }
@@ -140,16 +142,17 @@ img {
 .item .img {
 	width: 110px;
 	flex-grow: 1;
+	/* flex: 1 1 110px; */
 }
 
 .item .text {
 	width: 350px;
 	flex-grow: 3;
+	/* flex: 3 1 350px; */
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 961px) {
 	.item:nth-child(2n) {
-		/* display: block; */
 		flex-direction: row-reverse;
 	}
 }

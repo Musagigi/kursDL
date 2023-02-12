@@ -107,18 +107,15 @@ section {
 	margin: 20px auto;
 	border: 1px solid black;
 	border-radius: 10px;
+}
+
+/* positions */
+.article {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
-/* positions */
 .cat {
 	flex-grow: 1;
-}
-
-.dt {
-	width: 114;
-	flex-grow: 0;
-	text-align: end;
 }

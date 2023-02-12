@@ -109,18 +109,33 @@ img {
 	height: 100%;
 	padding: 0 5px;
 	overflow: hidden;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
 }
 
 .item {
 	border: 3px solid #fff;
 	text-align: center;
 	background: #fff;
-	box-sizing: border-box;
-	margin: 10px;
-	max-width: 300px;
 }
 
 /* positions */
+.wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.item {
+	margin: 10px;
+	/* width: calc(100% / 3 - 20px); */
+	max-width: 300px;
+	box-sizing: border-box;
+}
+
+/* Когда точно четное кол-во эл. */
+/* Свойство flex это сокращение от flex-grow, flex-shrink и flex-base */
+/* .item {
+	margin: 10px;
+	flex: 1 1 30%;
+	min-width: 300px;
+	box-sizing: border-box;
+} */
