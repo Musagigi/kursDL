@@ -1,0 +1,75 @@
+.container {
+	max-width: 2018px;
+	margin: 0 auto;
+}
+
+/* 1 */
+.advantages {
+	margin: 0 auto;
+}
+
+.advItems {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.advItem {
+	width: calc(100% / 3);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* 2 */
+.blogTitle {
+	padding: 10px;
+}
+
+.blogItems {
+	display: flex;
+	/* flex-wrap: wrap; */
+	justify-content: center;
+	text-align: center;
+	padding: 10px;
+}
+
+.blogItem {
+	max-width: 370px;
+	margin: 0 15px;
+}
+
+/* 3 */
+.statItems {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 190px 120px;
+}
+
+.statItem {
+	margin: 20px 40px;
+}
+
+@media screen and (max-width: 990px) {
+	.advItems {
+		display: block;
+	}
+	.advItem {
+		width: 100%;
+	}
+
+	.blogItems {
+		display: block;
+	}
+	.blogItem {
+		margin: 0 auto;
+	}
+
+	.stats {
+		background: rgba(235, 224, 201, 0.644);
+	}
+	.statItems {
+		flex-wrap: wrap;
+		padding: 60px 30px;
+	}
+}
