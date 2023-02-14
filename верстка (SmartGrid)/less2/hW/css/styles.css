@@ -56,10 +56,6 @@ h2,
 	color: #ffffff;
 }
 
-.advantages {
-	max-width: 2018px;
-}
-
 .advItem {
 	box-sizing: border-box;
 	color: #ffffff;
@@ -100,7 +96,6 @@ h2,
 }
 
 .advItem__btn {
-	margin-top: auto;
 	transition: background 0.3s, color 0.3s;
 }
 
