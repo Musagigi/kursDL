@@ -14,7 +14,7 @@ window.addEventListener('load', function () {
 		div.innerHTML = 'Text ' + (box.children.length + 1)
 		div.addEventListener('click', changeColor); // плохой код
 		box.appendChild(div)
-
+		console.log(event);
 	})
 
 });

@@ -13,4 +13,6 @@ function boxActive() {
 	this.classList.toggle('item3-active')
 	let color = this.classList.contains('item3-active') ? this.dataset.color : 'inherit'
 	this.style.color = color
-} 
+}
+
+// https://www.youtube.com/watch?v=9cNcpBn0KLU&list=PLyeqauxei6jfKHgefLiYxMQye331JZuqb&index=2

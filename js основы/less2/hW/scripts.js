@@ -24,7 +24,6 @@ window.addEventListener('load', function () {
 		}
 		if (inp) {
 			event.target.classList.remove('errorColor');
-
 		}
 	})
 })

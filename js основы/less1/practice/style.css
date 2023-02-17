@@ -6,7 +6,7 @@
 }
 
 /* toggle() принимает item3-active как аргумент */
-.item3.item3-active {
+.item3-active {
 	border-color: aqua;
 	box-shadow: 5px 5px 15px rgb(0, 0, 0);
 }
