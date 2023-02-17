@@ -7,16 +7,19 @@ window.addEventListener('load', function () {
 		name: /^[a-z ,.'-]+$/i,
 		phone: /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/,
 		email: /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i,
+
 	}
 
-
+		;
 	form.addEventListener('click', function (event) {
+		// console.log(event);
 
-		// let inp = event.target.classList.contains('check')
-		// let sbmt = event.target.classList.contains('sbmt')
 		let hasError = false
 		let validData
 
+		//если (при событии, цель класс содержит ('sbmt') ) -> идем дальше внутрь
+		// if(event.target.classList.[0] == 'sbmt') -> работает смотреть в DOM
+		// if(event.target.classList.value == 'sbmt') -> работает
 		if (event.target.classList.contains('sbmt')) {
 			for (let i = 0; i < itemInput.length; i++) {
 
