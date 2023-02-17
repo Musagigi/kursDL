@@ -60,8 +60,3 @@ let watchDev = gulp.series(buildWithClean, watch)
 
 gulp.task('build', buildWithClean)
 gulp.task('dev', watchDev)
-
-// gulp.task('html', html)
-// gulp.task('styles', styles)
-// gulp.task('images', images)
-
