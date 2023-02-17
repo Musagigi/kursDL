@@ -1,0 +1,166 @@
+html,
+body {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body {
+	font-family: Ubuntu;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+	color: #000000;
+	text-align: center;
+}
+
+h2,
+.h2 {
+	font-size: 35px;
+	margin: 32px 0;
+}
+
+.btn {
+	display: inline-block;
+	padding: 12px 51px;
+	cursor: pointer;
+	border-radius: 20px;
+	font-size: 18px;
+}
+
+.btn-green {
+	background-color: #1d9d73;
+	color: #ffffff;
+}
+
+.btn-white {
+	border: 1px solid #ffffff;
+	color: #ffffff;
+}
+
+.advItem {
+	box-sizing: border-box;
+	color: #ffffff;
+	text-align: center;
+	padding: 70px 5%;
+}
+
+.advItem-left {
+	background-color: #1fa87a;
+}
+
+.advItem-middle {
+	background-color: #1d9d73;
+}
+
+.advItem-right {
+	background-color: #1b936c;
+}
+
+.advItem__title {
+	font-size: 25px;
+	margin: 20px 0 15px;
+}
+
+.advItem__text {
+	font-size: 14px;
+	line-height: 23px;
+	margin-bottom: 30px;
+}
+
+.advItem__icon {
+	height: 66px;
+}
+
+.advItem__icon-small {
+	height: 58px;
+	margin-top: 8px;
+}
+
+.advItem__btn {
+	transition: background 0.3s, color 0.3s;
+}
+
+.advItem__btn:hover {
+	background: #ffffff;
+	color: #1d9d73;
+}
+
+.blogItem__title {
+	color: #333333;
+	font-size: 20px;
+	margin: 20px 0 16px;
+}
+
+.blogItem__text {
+	color: #888888;
+	font-size: 14px;
+	line-height: 23px;
+}
+
+.blogItem__meta {
+	color: #1d9d73;
+	font-size: 14px;
+	line-height: 23px;
+	margin: 13px 0;
+}
+
+.blogItem__metaItem {
+	margin-left: 15px;
+}
+
+.blogItem__metaIcon {
+	margin-right: 4px;
+}
+
+.blogButtons {
+	margin: 10px 0;
+	text-align: center;
+}
+
+.statItem__icon {
+	border-radius: 50%;
+	background: #1d9d73;
+	width: 119px;
+	height: 119px;
+	margin: 17px auto;
+	line-height: 150px;
+}
+
+.stats {
+	margin-top: 58px;
+	background: url("../img/stats-back.png") no-repeat top center;
+}
+
+.statItems {
+	text-align: center;
+}
+
+.statItem__number {
+	color: #1d9d73;
+	font-size: 45px;
+	margin: 15px 0;
+}
+
+.statItem__text {
+	color: #333333;
+	font-size: 20px;
+}
