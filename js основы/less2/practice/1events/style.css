@@ -3,6 +3,6 @@
 	border: 10px solid transparent;
 }
 
-.img.active {
+.active {
 	border: 10px solid rgb(200, 80, 89);
 }

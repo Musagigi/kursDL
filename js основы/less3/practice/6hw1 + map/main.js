@@ -5,32 +5,29 @@ window.addEventListener('load', function () {
 	let selSign = document.querySelector('.selectSign')
 	let btnAns = document.querySelector('.btnAns')
 	let result = document.querySelector('.result')
-
+	let mathOptions = {
+		plus: (a, b) => a + b,
+		minus: (a, b) => a - b,
+		multi: (a, b) => a * b,
+		dvsin: (a, b) => a / b,
+	}
 
 	btnAns.addEventListener('click', calculate)
 
 	function calculate() {
 
-		let num1 = +numOne.value
-		let num2 = +numTwo.value
-
-		if (numOne.value === '' && numTwo.value === '') {
+		if (numOne.value === '' || numTwo.value === '') {
 			return result.innerText = 'введите числа'
 		}
-		switch (selSign.value) {
-			case 'plus':
-				result.innerText = num1 + num2
-				break
-			case 'minus':
-				result.innerText = num1 - num2
-				break
-			case 'multi':
-				result.innerText = num1 * num2
-				break
-			case 'dvsin':
-				result.innerText = num1 / num2
-				break
-		}
+
+		let num1 = +numOne.value
+		let num2 = +numTwo.value
+		/* let valSelSign = selSign.value - берем знак
+		let fn = mathOptions[valSelSign] - обращаемся к объекту по знаку (ключу)
+		result = fn(num1, num2)
+		*/
+		result.innerText = mathOptions[selSign.value](num1, num2) // укороченный вариант
+
 		this.disabled = true
 	}
 

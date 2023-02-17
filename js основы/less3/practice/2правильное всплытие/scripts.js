@@ -10,7 +10,8 @@ window.addEventListener('load', function () {
 		// который соответствует заданному CSS-селектору или null
 		let elem = evt.target.closest('.item')
 
-		if (elem !== null) {
+		if (elem !== null && box.contains(elem)) {
+			// box.contains(elem) - если случайно .item будет поверх box
 			changeColor(elem)
 		}
 
