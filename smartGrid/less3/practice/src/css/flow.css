@@ -37,6 +37,7 @@
 	margin: 15px;
 	width: calc(100% / 3 - 30px);
 	box-sizing: border-box;
+	background: red;
 }
 
 /* 3 */
