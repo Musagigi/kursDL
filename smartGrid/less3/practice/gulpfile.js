@@ -1,14 +1,13 @@
 const gulp = require('gulp')
 const del = require('del') // для удал-ия старых файлов из 'build'
-const concat = require('gulp-concat')
+const concat = require('gulp-concat') // объединяет в один файл
 const autoprefixer = require('gulp-autoprefixer')
 const cleanCSS = require('gulp-clean-css')
-const sourcemaps = require('gulp-sourcemaps')
+const sourcemaps = require('gulp-sourcemaps') // при объединении css файлов в один, сохраняет номера строк, css
 const gulpIf = require('gulp-if')
-const browserSync = require('browser-sync').create()
+const browserSync = require('browser-sync').create() // автоматически обнов. страницу, при измен. в файлах
 
-// let isDev = true
-// let isProd = !isDev
+
 // чтобы не прописывать флажки, можно в package.json прописать в scripts укороч. запуск
 let isMinify = process.argv.includes('--mini') // forRelizBuild
 let isMapForCss = process.argv.includes('--map') // forDevelop
@@ -21,6 +20,7 @@ function clean() {
 function html() {
 	return gulp.src('./src/**/*.html') // из
 		.pipe(gulp.dest('./build')) // в (dest - destination - назначение)
+		.pipe(browserSync.stream())
 }
 
 function styles() {
@@ -48,6 +48,7 @@ function watch() {
 		}
 	})
 	gulp.watch('./src/css/**/*.css', styles)
+	gulp.watch('./src/**/*.html', html)
 }
 
 // gulp.series - выполняет таски по очереди (завершится один, перейдет к другому)
