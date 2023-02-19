@@ -51,22 +51,33 @@ h2,
 }
 .btn-green {
   background-color: #1d9d73;
-  color: #ffffff;
+  color: #fff;
 }
 .btn-white {
   border: 1px solid #ffffff;
   color: #ffffff;
 }
+.shadow,
+.advItem__btn,
+.statItem__icon {
+  box-shadow: 5px 5px 10px #222;
+}
+.sg-row,
+.blogItems,
+.statItems {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
 .advItems {
   display: flex;
 }
 .advItem {
+  width: calc(33.33333333% - 0px);
   box-sizing: border-box;
   color: #fff;
   text-align: center;
   padding: 70px 5%;
-  width: calc(100% / 3);
-  /* 33.3333334% for IE 11 */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,23 +125,20 @@ h2,
   }
 }
 .blogItems {
-  display: flex;
-  flex-wrap: wrap;
   text-align: center;
-  margin: 0 -15px;
 }
 .blogItem {
+  width: calc(33.33333333% - 30px);
   margin: 15px;
-  width: calc(100% / 12 * 4 - 30px);
   box-sizing: border-box;
 }
 .blogItem__title {
-  color: #333333;
+  color: #333;
   font-size: 20px;
   margin: 20px 0 16px;
 }
 .blogItem__text {
-  color: #888888;
+  color: #888;
   font-size: 14px;
   line-height: 23px;
 }
@@ -159,6 +167,19 @@ h2,
     width: auto;
   }
 }
+.stats {
+  margin-top: 58px;
+  background: url("../img/stats-back.png") no-repeat top center;
+}
+.statItems {
+  min-height: 620px;
+  align-items: center;
+  text-align: center;
+}
+.statItem {
+  width: calc(25% - 30px);
+  margin: 15px;
+}
 .statItem__icon {
   border-radius: 50%;
   background: #1d9d73;
@@ -167,32 +188,14 @@ h2,
   margin: 17px auto;
   line-height: 150px;
 }
-.stats {
-  margin-top: 58px;
-  background: url("../img/stats-back.png") no-repeat top center;
-}
-.statItems {
-  text-align: center;
-}
 .statItem__number {
   color: #1d9d73;
   font-size: 45px;
   margin: 15px 0;
 }
 .statItem__text {
-  color: #333333;
+  color: #333;
   font-size: 20px;
-}
-.statItems {
-  margin: 0 -15px;
-  min-height: 620px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.statItem {
-  width: calc(100% / 4 - 30px);
-  margin: 15px;
 }
 @media screen and (max-width: 992px) {
   .stats {
