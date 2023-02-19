@@ -5,6 +5,7 @@ const autoprefixer = require('gulp-autoprefixer')
 const cleanCSS = require('gulp-clean-css')
 const sourcemaps = require('gulp-sourcemaps') // при объединении css файлов в один, сохраняет номера строк, css
 const gulpIf = require('gulp-if')
+const gcmq = require('gulp-group-css-media-queries'); // объединяет медиа запросы по ширине
 const browserSync = require('browser-sync').create() // автоматически обнов. страницу, при измен. в файлах
 
 
@@ -29,6 +30,7 @@ function styles() {
 		.pipe(gulpIf(isMapForCss, sourcemaps.init()))
 		.pipe(concat('main.css'))
 		.pipe(autoprefixer({}))
+		.pipe(gcmq())
 		.pipe(gulpIf(isMinify, cleanCSS({ level: 1 })))
 		.pipe(gulpIf(isMapForCss, sourcemaps.write()))
 		.pipe(gulp.dest('./build/css'))
