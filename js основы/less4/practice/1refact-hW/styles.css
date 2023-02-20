@@ -1,0 +1,12 @@
+html,
+body {
+	margin: 40px;
+}
+
+.errorColor {
+	outline: 1px solid red;
+}
+
+.error-message {
+	font-size: 12px;
+}
