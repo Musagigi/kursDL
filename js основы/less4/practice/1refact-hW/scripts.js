@@ -30,7 +30,8 @@ window.addEventListener('load', function () {
 				item = items[i]
 				validData = validForm[item.name]
 
-				if (item.value == '' || !validData.pattern.test(item.value)) {
+				// validData !== undefined - если эелемент не найден, чтобы не падала ошибка
+				if (validData !== undefined && !validData.pattern.test(item.value)) {
 					item.classList.add('errorColor')
 					hasError = true
 					showError(item, validData.errorText)
