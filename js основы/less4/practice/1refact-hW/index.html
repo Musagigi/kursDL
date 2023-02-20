@@ -9,9 +9,27 @@
 	</head>
 	<body>
 		<form class="form">
-			Имя<br /><input type="text" name="name" class="check" /><br />
-			Телефон<br /><input type="text" name="phone" class="check" /><br />
-			Почта<br /><input type="text" name="email" class="check" /><br />
+			<div class="formInputBox">
+				<div>Имя</div>
+				<div>
+					<input type="text" name="name" class="check" />
+				</div>
+				<div class="error-message"></div>
+			</div>
+			<div class="formInputBox">
+				<div>Телефон</div>
+				<div>
+					<input type="text" name="phone" class="check" />
+				</div>
+				<div class="error-message"></div>
+			</div>
+			<div class="formInputBox">
+				<div>Почта</div>
+				<div>
+					<input type="text" name="email" class="check" />
+				</div>
+				<div class="error-message"></div>
+			</div>
 			<input type="submit" value="Отправить" class="sbmt" />
 		</form>
 	</body>
