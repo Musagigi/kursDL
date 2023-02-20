@@ -56,7 +56,7 @@ function watch() {
 // gulp.parallel - выполняет одновременно (нач. и заверш. в любой последовательности)
 // чтобы не писать таски по Одному
 let build = gulp.parallel(html, styles, images)
-let buildWithClean = gulp.series(clean, build) // сначала очищаем build, потом переносим файлы
+let buildWithClean = gulp.series(clean, build)
 
 let watchDev = gulp.series(buildWithClean, watch)
 
