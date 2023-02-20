@@ -12,14 +12,10 @@ window.addEventListener('load', function () {
 
 		;
 	form.addEventListener('click', function (event) {
-		// console.log(event);
 
 		let hasError = false
 		let validData
 
-		//если (при событии, цель класс содержит ('sbmt') ) -> идем дальше внутрь
-		// if(event.target.classList.[0] == 'sbmt') -> работает смотреть в DOM
-		// if(event.target.classList.value == 'sbmt') -> работает
 		if (event.target.classList.contains('sbmt')) {
 			for (let i = 0; i < itemInput.length; i++) {
 
