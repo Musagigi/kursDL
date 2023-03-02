@@ -27,8 +27,9 @@ window.addEventListener('load', function () {
 
 		if (event.target.classList.contains('sbmt')) {
 			for (let i = 0; i < items.length; i++) {
+				// console.log(items[i].dataset.rule);
 				item = items[i]
-				validData = validForm[item.name]
+				validData = validForm[item.dataset.rule]
 
 				// validData !== undefined - если эелемент не найден, чтобы не падала ошибка
 				if (validData !== undefined && !validData.pattern.test(item.value)) {
@@ -51,7 +52,6 @@ window.addEventListener('load', function () {
 });
 
 function showError(input, message) {
-
 	let box = input.closest('.formInputBox') // обратились к родителю инпута
 	let msgBox = box.querySelector('.error-message') // нашли внутри родителя, блок с ошибкой
 	msgBox.innerHTML = message // записали текст с ошибкой в блок для ошибки
