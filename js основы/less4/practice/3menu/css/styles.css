@@ -28,5 +28,26 @@ body {
 
 .content {
 	margin-top: 70px;
-	/* position: absolute; */
+}
+
+.btn {
+	transition: 0.5s;
+	display: none;
+}
+
+.goTop {
+	display: block;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	background: #00000039;
+	border: 0;
+	color: #fff;
+	padding: 10px 20px;
+	position: fixed;
+	transition: 0.5s;
+}
+
+.goTop:hover {
+	background: #000;
 }
