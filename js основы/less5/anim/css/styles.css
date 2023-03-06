@@ -44,7 +44,7 @@ body {
 	pointer-events: none;
 }
 
-.goTop {
+.btn.goTop {
 	opacity: 1;
 	pointer-events: all;
 }
