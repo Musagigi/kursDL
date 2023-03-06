@@ -1,0 +1,54 @@
+html,
+body {
+	margin: 0;
+	background: #eee;
+}
+
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #000;
+	color: #fff;
+	height: 50px;
+	width: 100%;
+}
+
+.menu a {
+	color: inherit;
+	line-height: 50px;
+	font-size: 20px;
+	margin: 0 10px;
+	transition: color 0.4s;
+}
+
+.menu .menu__link-active {
+	color: #ff0;
+}
+
+.content {
+	margin-top: 70px;
+}
+
+.btn {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	cursor: pointer;
+	border: 0;
+	color: #fff;
+	background: #00000039;
+	padding: 10px 20px;
+	transition: 0.5s;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.goTop {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.goTop:hover {
+	background: #000;
+}
