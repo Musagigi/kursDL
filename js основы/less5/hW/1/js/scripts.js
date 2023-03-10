@@ -7,8 +7,8 @@ window.addEventListener('load', function () {
 		e.preventDefault();
 		// hash - это id селектора (#test) в ссылке тега <a> href="index.html#test"
 		let targets = document.querySelector(this.hash);
-		let scrollTarget = scrollToElem(targets)
-		scrollToY(scrollTarget)
+		let coordTarget = coordElement(targets)
+		scrollToY(coordTarget)
 		setActiveMenuItem(headerMenu, this)
 	});
 	// location - путь в адресной строке
@@ -17,7 +17,7 @@ window.addEventListener('load', function () {
 	let autoTarget = hash.length > 0 ? document.querySelector(hash) : null;
 
 	if (autoTarget !== null) {
-		scrollToElem(autoTarget, getMarginTop);
+		coordElement(autoTarget, getMarginTop);
 		setActiveMenuItem(headerMenu, headerMenu.querySelector(`[href$="${hash}"]`));
 	}
 
@@ -35,7 +35,7 @@ window.addEventListener('load', function () {
 
 		headerLinks.forEach(linkItem => {
 			let coordlink = document.querySelector(linkItem.hash)
-			let exactCoordLink = scrollToElem(coordlink) - 50
+			let exactCoordLink = coordElement(coordlink) - 50
 			if (exactCoordLink <= positionY) {
 				setActiveMenuItem(headerMenu, linkItem)
 			}
@@ -58,7 +58,7 @@ function setActiveMenuItem(menu, item) {
 	item.classList.add('menu__link-active');
 }
 
-function scrollToElem(elem) {
+function coordElement(elem) {
 	let coordsElem = elem.getBoundingClientRect();
 	let contentMarginTop = window.getComputedStyle(document.querySelector('.content'))
 	let elemCoordsTop = window.scrollY + coordsElem.top - parseInt(contentMarginTop.marginTop)

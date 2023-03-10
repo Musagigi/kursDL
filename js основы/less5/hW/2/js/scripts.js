@@ -6,8 +6,8 @@ window.addEventListener('load', function () {
 
 		if (answer.classList.contains('open')) {
 			let animation = answer.animate([
-				{ opacity: 1, transform: 'translateX(0)' },
-				{ opacity: 0, transform: 'translateX(100px)' }
+				{ height: '169px' },
+				{ height: '0' }
 			], { duration: 500 });
 
 			animation.addEventListener('finish', function () {
@@ -18,9 +18,9 @@ window.addEventListener('load', function () {
 			answer.classList.add('open');
 
 			answer.animate([
-				{ opacity: 0, transform: 'translateX(-100px)' },
-				{ opacity: 1, transform: 'translateX(0)' }
-			], { duration: 300 });
+				{ height: '0' },
+				{ height: '169px' }
+			], { duration: 500 });
 		}
 	});
 
@@ -35,3 +35,7 @@ function delegate(box, selector, eventName, handler) {
 		}
 	});
 }
+
+
+// выводить анимацию сверху вниз, по высоте, нужно получить данные высоты
+// браузер сам не может отслеживать высоту
