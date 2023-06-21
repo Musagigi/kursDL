@@ -78,18 +78,18 @@ body {
 	padding: 0 15px;
 }
 
-@media screen and (max-width: 767px) {
-	html {
-		font-size: 8px;
-	}
+// @media screen and (max-width: 767px) {
+// 	html {
+// 		font-size: 8px;
+// 	}
 
-	.container {
-		padding: 10px $offsetOneSide;
-	}
-}
+// 	.container {
+// 		padding: 10px $offsetOneSide;
+// 	}
+// }
 
-@media screen and (max-width: 321px) {
-	.container {
-		padding: 10px calc($offsetOneSide / 2);
-	}
-}
+// @media screen and (max-width: 321px) {
+// 	.container {
+// 		padding: 10px calc($offsetOneSide / 2);
+// 	}
+// }

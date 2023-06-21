@@ -5,22 +5,57 @@
 .user-card {
 	border: 1px solid #f00;
 	padding: 15px;
+	display: grid;
+	grid-template-rows: 60px 120px 120px;
+	grid-template-columns: 360px 1fr;
+	grid-template-areas:
+		"header header"
+		"pic slogan"
+		"pic actions";
 }
 
-.user-card__names {
-	font-size: 30px;
+.user-header {
+	grid-area: header;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+
+	&__names {
+		font-size: 30px;
+	}
+
+	&__rating {
+		font-size: 26px;
+		text-align: right;
+	}
 }
 
-.user-card__rating {
-	font-size: 26px;
-	text-align: right;
+.user-card__pic {
+	grid-area: pic;
+	// margin-right: 30px;
+	height: auto;
+	width: 100%;
 }
 
 .user-card__slogan {
+	grid-area: slogan;
 	font-style: italic;
 }
 
+.user-card__actions {
+	grid-area: actions;
+	// text-align: center;
+	// width: 100%;
+	display: flex;
+	justify-content: space-between;
+	height: 40px;
+	gap: 20px;
+}
+
 .user-card__btn {
+	border-radius: 0;
+	width: 100%;
 }
 
 .btn {
