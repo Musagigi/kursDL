@@ -1,0 +1,95 @@
+html {
+	font-size: 10px;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+p,
+ul,
+li {
+	margin: 0;
+	font-size: 100%;
+	font-weight: normal;
+}
+
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+}
+
+body {
+	max-width: $maxWidthBody;
+	margin: 0 auto;
+	overflow-x: hidden;
+	font-family: $mainFont;
+	font-family: $secondFont;
+	font-weight: 400;
+	font-size: 16px;
+	color: $colorBlack;
+}
+
+.container {
+	max-width: $maxWidthContainer;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+// @media screen and (max-width: 767px) {
+// 	html {
+// 		font-size: 8px;
+// 	}
+
+// 	.container {
+// 		padding: 10px $offsetOneSide;
+// 	}
+// }
+
+// @media screen and (max-width: 321px) {
+// 	.container {
+// 		padding: 10px calc($offsetOneSide / 2);
+// 	}
+// }

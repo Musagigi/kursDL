@@ -1,0 +1,11 @@
+%row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
+
+%gradientText {
+	background: linear-gradient(90deg, #c3956a 3.65%, #a24f03 100%);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}

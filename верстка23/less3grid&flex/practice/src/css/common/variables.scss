@@ -1,0 +1,29 @@
+$maxWidthBody: 1920px;
+$maxWidthContainer: 1180px;
+$mainFont: "PublicSans", sans-serif;
+$secondFont: "LibreBaskerville", sans-serif;
+$pathImg: "../img/";
+$colorWhite: #fff;
+$colorBlack: #000;
+$colorRed: red;
+$column: 12;
+$offset: 30px;
+$offsetOneSide: 15px;
+
+.btnReset {
+	border: 0;
+	padding: 0;
+	background: transparent;
+	cursor: pointer;
+}
+
+.btn {
+	display: inline-block;
+	min-width: 180px;
+	border: 0;
+	padding: 20px 15px;
+	border-radius: 30px;
+	text-decoration: none;
+	text-align: center;
+	background-color: $colorWhite;
+}
