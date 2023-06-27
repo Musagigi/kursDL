@@ -1,0 +1,41 @@
+$bigW: 600;
+$bigH: 1068;
+$gap: 10px;
+$ratio: calc($bigW / $bigH);
+$smallW: calc((100% - $gap * (2 + $ratio)) / ($ratio * 2 + 2));
+
+.section {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.list__photos {
+	display: grid;
+	grid-template-columns: $smallW 1fr $smallW;
+	gap: $gap;
+}
+
+.list__photo-full {
+	grid-row: span 2;
+}
+
+.list__item {
+	display: block;
+}
+
+@media screen and (max-width: 860px) {
+	$smallW: calc((100% - $gap * (1 + 3 * $ratio)) / ($ratio * 4 + 1));
+
+	.list__photos {
+		grid-template-columns: 1fr $smallW;
+	}
+	.list__photo-full {
+		grid-row: 1 / span 4;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.list__photos {
+		grid-template-columns: 1fr;
+	}
+}
