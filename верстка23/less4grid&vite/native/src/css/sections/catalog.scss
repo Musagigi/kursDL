@@ -1,0 +1,44 @@
+.catalog-section {
+	background: rgb(255, 238, 195);
+	padding: 30px 0;
+}
+
+.catalog-box {
+	--gap: 10px;
+	display: grid; /* grid or margin... it is nothing... */
+	gap: var(--gap);
+}
+
+.catalog-box img {
+	display: block;
+}
+
+@media screen and (min-width: 541px) {
+	.catalog-box {
+		--bigW: 600;
+		--bigH: 1068;
+		--ratio: calc(var(--bigW) / var(--bigH));
+		--smallW: calc(
+			(100% - var(--gap) * (1 + 3 * var(--ratio))) / (4 * var(--ratio) + 1)
+		);
+		grid-template-columns: 1fr var(--smallW);
+	}
+
+	.catalog-item__full {
+		grid-row: span 4;
+	}
+}
+
+@media screen and (min-width: 841px) {
+	.catalog-box {
+		--smallW: calc(
+			(100% - var(--gap) * (2 + var(--ratio))) / (2 * var(--ratio) + 2)
+		);
+		grid-template-columns: var(--smallW) 1fr var(--smallW);
+		grid-auto-flow: dense;
+	}
+
+	.catalog-item__full {
+		grid-column: 2;
+	}
+}
