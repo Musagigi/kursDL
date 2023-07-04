@@ -10,7 +10,7 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				main: resolve('./src/index.html'),
-				nested: resolve('./src/pages/posts.html')
+				posts: resolve('./src/pages/posts.html')
 			}
 		}
 	},

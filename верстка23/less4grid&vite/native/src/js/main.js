@@ -9,12 +9,13 @@ document.addEventListener('DOMContentLoaded', function () {
 		gridBox.style.setProperty('--bigH', bigImg.naturalHeight);
 	}
 
-	if (bigImg.naturalWidth > 0) {
-		setRatio();
-	}
-	else {
-		bigImg.addEventListener('load', function () {
+	if (bigImg !== null) {
+		if (bigImg.naturalWidth > 0) {
 			setRatio();
-		});
+		} else {
+			bigImg.addEventListener('load', function () {
+				setRatio();
+			});
+		}
 	}
 });
