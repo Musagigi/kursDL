@@ -8,8 +8,57 @@
 		<script type="module" src="/js/main.js"></script>
 		<title>Document</title>
 	</head>
-	<body>
-		<div class="container max-lg:max-w-none">
+	<body class="overflow-x-hidden">
+		<div class="container max-xl:max-w-none">
+			<header
+				class="relative flex justify-between py-8 before:w-[100vw] before:absolute before:top-[0] before:bottom-[0] before:right-[0] before:left-[calc((-100vw+100%)/2)] before:-z-10 before:shadow-[0_10px_15px_-8px_rgb(0,0,0,0.1)]"
+			>
+				<div class="grow shrink-0 mr-5">
+					<img class="h-6" src="/img/header/Logo.svg" alt="" />
+				</div>
+				<nav class="flex gap-6">
+					<ul class="flex gap-6">
+						<li class="w-[100%] hover:text-green-500">
+							<button
+								class="relative after:content-[url(/img/header/down_icon.svg)] after:absolute after:h-6 after:w-[15px] after:top-1"
+							>
+								Home
+							</button>
+						</li>
+						<li>
+							<button class="hover:text-green-500">About</button>
+						</li>
+						<li>
+							<button class="hover:text-green-500">Pages</button>
+						</li>
+						<li>
+							<a class="hover:text-green-500" href="#">Blog</a>
+						</li>
+						<li>
+							<a class="hover:text-green-500" href="#">Gallery</a>
+						</li>
+						<li>
+							<a class="hover:text-green-500" href="#">Shop</a>
+						</li>
+						<li>
+							<a class="hover:text-green-500" href="#">Contacts</a>
+						</li>
+					</ul>
+					<button class="shrink-0" type="input">
+						<svg
+							class="h-6 hover:fill-blue-500"
+							id="Flat"
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 256.00098 256.00098"
+						>
+							<path
+								d="M228.23437,219.7583l-44.53076-44.53076a90.11,90.11,0,1,0-8.48535,8.48437L219.75,228.24365a5.9997,5.9997,0,0,0,8.48437-8.48535ZM37.99805,116a78,78,0,1,1,78,78A78.08811,78.08811,0,0,1,37.99805,116Z"
+							/>
+						</svg>
+					</button>
+				</nav>
+			</header>
+
 			<div class="text-center py-8">
 				<h1 class="mt-5 text-4xl font-extrabold text-blue-900">Our team</h1>
 				<p class="block mt-5">
